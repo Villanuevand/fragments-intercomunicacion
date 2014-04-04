@@ -22,6 +22,9 @@ public class FragmentB extends Fragment {
 			data = savedInstanceState.getString("mensaje");
 			TextView txt = (TextView) view.findViewById(R.id.textview_fragment_b);
 			txt.setText(data);
+		}else{
+			TextView txt = (TextView) view.findViewById(R.id.textview_fragment_b);
+			txt.setText(getResources().getString(R.string.app_name));
 		}
 		return view;
 	}

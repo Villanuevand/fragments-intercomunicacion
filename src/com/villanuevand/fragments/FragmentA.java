@@ -8,11 +8,10 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-public class FragmentA extends Fragment implements OnClickListener{
+public class FragmentA extends Fragment implements View.OnClickListener{
 
 	Button button;
 	int counter = 0;
@@ -23,8 +22,7 @@ public class FragmentA extends Fragment implements OnClickListener{
 	public void onCreate(Bundle savedInstanceState) {	
 		super.onCreate(savedInstanceState);
 		if(savedInstanceState != null){
-			savedInstanceState.getInt("contador",0);
-			
+			counter = savedInstanceState.getInt("contador",0);			
 		}else{
 			counter = 0;
 		}
