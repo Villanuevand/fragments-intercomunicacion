@@ -18,6 +18,18 @@ public class FragmentA extends Fragment implements OnClickListener{
 	int counter = 0;
 	Communicator c;
 	
+	
+	@Override
+	public void onCreate(Bundle savedInstanceState) {	
+		super.onCreate(savedInstanceState);
+		if(savedInstanceState != null){
+			savedInstanceState.getInt("contador",0);
+			
+		}else{
+			counter = 0;
+		}
+	}
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {		
@@ -33,7 +45,12 @@ public class FragmentA extends Fragment implements OnClickListener{
 		
 	}
 	
-
+	@Override
+	public void onSaveInstanceState(Bundle outState) {	
+		super.onSaveInstanceState(outState);
+		outState.putInt("contador", counter);
+	}
+	
 	@Override
 	public void onClick(View v) {	
 		counter++;
