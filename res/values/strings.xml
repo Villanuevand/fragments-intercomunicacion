@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Comunicacion InterFragments</string>
+    <string name="hello_world">¡Cuenta +1!</string>
+    <string name="action_settings">Settings</string>
+    <string name="msj_presionado_x">Se ha presionado el boton %1$d veces</string>
+
+</resources>
