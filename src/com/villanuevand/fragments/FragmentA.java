@@ -24,7 +24,7 @@ public class FragmentA extends Fragment implements View.OnClickListener{
 		if(savedInstanceState != null){
 			counter = savedInstanceState.getInt("contador",0);			
 		}else{
-			counter = 0;
+			counter = 0;			
 		}
 	}
 	
@@ -52,7 +52,7 @@ public class FragmentA extends Fragment implements View.OnClickListener{
 	@Override
 	public void onClick(View v) {	
 		counter++;
-		c.respond(getResources().getString(R.string.msj_presionado_x,counter));
+		c.respond("Se ha presionado el boton "+ counter +" veces"); 
 	}
 	
 

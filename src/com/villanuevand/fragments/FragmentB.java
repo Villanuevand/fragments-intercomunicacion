@@ -23,8 +23,9 @@ public class FragmentB extends Fragment {
 			TextView txt = (TextView) view.findViewById(R.id.textview_fragment_b);
 			txt.setText(data);
 		}else{
+			String t = getResources().getString(R.string.app_name);
 			TextView txt = (TextView) view.findViewById(R.id.textview_fragment_b);
-			txt.setText(getResources().getString(R.string.app_name));
+			txt.setText(t);
 		}
 		return view;
 	}
